@@ -1,0 +1,7 @@
+.header-home{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    margin: 32px 0;
+}
+    

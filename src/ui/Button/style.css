@@ -1,0 +1,17 @@
+.btn-primary{
+    font-family: 'Spartan',sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: -0.016rem;
+    line-height: 1.25;
+    padding: 17px 24px 16px 24px;
+    font-weight: 700;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: background-color 300ms ease-in-out,color 400ms ease-in-out;
+    background-color: hsl(252,94%,67%);
+    position: relative;
+    padding: 15px 15px 14px 46px;
+}

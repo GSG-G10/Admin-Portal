@@ -1,0 +1,10 @@
+.body-panel{
+   width: 100%;
+    max-width: 730px;
+    padding: 0;
+    display: flex; 
+}
+.employee-list{
+    display: flex;
+    flex-direction: column;
+}

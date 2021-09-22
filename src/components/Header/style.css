@@ -1,0 +1,50 @@
+.header{
+   display: flex;
+    flex-flow: column;
+    background-color: #1e2139;
+    height: clamp(72px,10.5vw,80px);
+    transition: background-color 400s ease-in-out;
+    z-index: 100;
+    width: 8rem;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0 0;
+    position: fixed;
+}
+.admin-profile-image{
+  height: 88px;
+    width: 100%;
+    border-left: unset;
+    border-top: 1px solid hsl(231,20%,36%);
+    position: relative;
+}
+.admin-profile-image::before{
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+    background-image: url('https://randomuser.me/api/portraits/men/75.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    transform: translate(-50%,-50%); 
+}
+.admin-active{
+ background: none;
+    border: none;
+    cursor: pointer;
+    width: 25px;
+    width: 30px;
+    padding: 0 0 1rem 0;
+}
+.admin-panel{
+  width: 100%;
+  text-align: -webkit-center;
+}
+    
+
+    
+    
