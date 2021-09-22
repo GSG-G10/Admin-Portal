@@ -18,6 +18,7 @@
     border-left: unset;
     border-top: 1px solid hsl(231,20%,36%);
     position: relative;
+    display: block;
 }
 .admin-profile-image::before{
     position: absolute;
@@ -36,9 +37,9 @@
  background: none;
     border: none;
     cursor: pointer;
-    width: 25px;
     width: 30px;
     padding: 0 0 1rem 0;
+    display: block;
 }
 .admin-panel{
   width: 100%;

@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { H5,H4 } from '../Typography'
 import { arrow } from '../../assets'
+import {useStore} from "../../control-data/context"
 import "./style.css";
-function EmployeeRow({key, employee:{first,last,created,balance} }) {
+function EmployeeRow({key, employee:{first,last,created,balance,email} }) {
+     const [,dispatch] = useStore()
     return (
         <li className="employee-row" id={key}>
             {/* avater empolyee , date , name , balance , tools */}
@@ -21,10 +23,10 @@ function EmployeeRow({key, employee:{first,last,created,balance} }) {
             <div className="employee-row-tools">
                 <img src={arrow} alt="setting" />
                 <ul className="employee-row-tools-list">
-                    <li className="drop-employee">
+                    <li className="drop-employee" onClick={()=>dispatch({type:"Drop_EMPLOYEES",payload:email})}>
                         Drop Empolyee
                     </li>
-                    <li className="increase-balance">
+                    <li className="increase-balance" onClick={()=>dispatch({type:"Add_Balance",payload:email})}>
                         Increase Balance
                     </li>
                 </ul>

@@ -4,7 +4,7 @@ import {useStore} from "../../control-data/context"
 import "./style.css"
 function BodyPanel() {
     // const [employees,setEmployees] = useState([])
-    const {state:{employees},dispatch} = useStore()
+    const [{employees},dispatch] = useStore()
     useEffect(()=>{
         const abortController = new AbortController();
         fetch('https://randomapi.com/api/6de6abfedb24f889e0b5f675edc50deb?fmt=raw&sole')
@@ -18,13 +18,14 @@ function BodyPanel() {
     });
     return () =>  abortController.abort(); 
     },[])
+    
     return (
             <section className="body-panel">
                 <ul className="employee-list">
                {  
                    employees.length?
-                    employees.map((employee,index)=>{
-                        return <EmployeeRow key={index} employee={employee}/>
+                    employees.map((employee)=>{
+                        return <EmployeeRow key={employee.email} employee={employee}/>
                     })
                     :
                     <div className="loader"> Loading ...</div>
