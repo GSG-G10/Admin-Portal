@@ -1,5 +1,6 @@
 import addBalance from "../utils/addBalance";
 import dropEmployees from "../utils/deleteEmploye";
+
 export const initialState = {
   employees: [],
   activities:[]
@@ -12,18 +13,26 @@ const reducer = (state,action) =>{
             employees: action.payload
         };
         case 'Drop_EMPLOYEES':
-        return {
+      const emplo = {
         ...state,
         employees: dropEmployees(state.employees,action.payload),
         activities: [...state.activities,{type: 'Drop', msg:`You made drop for ${action.payload} at ${new Date()}`}]
-        
-        };
+        }
+        localStorage.setItem('activities',JSON.stringify(state.activities))
+        return emplo;
          case 'Add_Balance':
-        return {
-           ...state,
-            employees: addBalance(state.employees,action.payload),
-            activities: [...state.activities,{type: 'Add', msg:`You made add balance for ${action.payload} at ${new Date()}`}]
-        };
+            const obj ={
+            ...state,
+                employees: addBalance(state.employees,action.payload),
+                activities: [...state.activities,{type: 'Add', msg:`You made add balance for ${action.payload} at ${new Date()}`}]
+            };
+            localStorage.setItem('activities',JSON.stringify(state.activities));
+            return obj;
+            case 'GET_ACT_LOCALSTORAGE':
+               return{
+                    ...state,
+                activities: JSON.parse(localStorage.getItem('activities'))
+               }
         default:
         return state;
     }

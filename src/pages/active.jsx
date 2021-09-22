@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useLayoutEffect} from 'react'
 import { useStore } from '../control-data/context'
 import { H4 } from '../ui/Typography'
 import { ActiveRow } from '../ui'
 export default function Active() {
-    const [{activities}] = useStore();
+    const [{activities},dispatch] = useStore();
+    useLayoutEffect(() => {
+        // there I want fetch previous active before render this page
+        dispatch({type:"GET_ACT_LOCALSTORAGE"})
+    }, [])
     return (
         <div className="active">
          <H4>Your Activities</H4>
