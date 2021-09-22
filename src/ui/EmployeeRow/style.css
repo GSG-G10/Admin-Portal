@@ -24,4 +24,45 @@
     border-radius: 5rem;
     background: #858bb2;
    }
+   .employee-row-tools {
+    position: relative;
+}
+   ul.employee-row-tools-list {
+    position: absolute;
+    background: #7b5cfa;
+    list-style: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 1rem;
+    border-radius: .5rem;
+    top: -2rem;
+    right: -10rem;
+    display: none;
+   }
+  
+   .employee-row-tools:hover ul.employee-row-tools-list{
+     display: inline;
+    }
+    .employee-row-tools li{
+       padding: .5rem 1rem;
+    }
+   li.drop-employee {
+    color: red;
+    cursor: pointer;
+   }
+  li.drop-employee:hover{
+    background-color: red;
+    color: #fff;
+  }
+  .increase-balance{
+    color:#080
+  }
+  .increase-balance:hover{
+    color: #fff;
+    background-color: #080;
+  }
+    ul.employee-row-tools-list:not(:last-child) {
+    border-bottom: 1px solid #858bb2;
+   }
  
