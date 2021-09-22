@@ -1,2 +1,2 @@
 # Admin-Portal
-Good Morning
+A simple site that similar to control panel for admin so that they can see all the employees in the company with their names and pictures, the site enables the admin to add the balance for an employee and can drop an employee .
