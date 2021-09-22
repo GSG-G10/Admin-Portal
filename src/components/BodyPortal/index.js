@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { EmployeeRow } from '../../ui'
 import {useStore} from "../../control-data/context"
 import "./style.css"
 function BodyPanel() {
-    // const [employees,setEmployees] = useState([])
     const [{employees},dispatch] = useStore()
     useEffect(()=>{
         const abortController = new AbortController();
@@ -24,8 +23,8 @@ function BodyPanel() {
                 <ul className="employee-list">
                {  
                    employees.length?
-                    employees.map((employee)=>{
-                        return <EmployeeRow key={employee.email} employee={employee}/>
+                    employees.map((employee,index)=>{
+                        return <EmployeeRow  key={index} employee={employee}/>
                     })
                     :
                     <div className="loader"> Loading ...</div>

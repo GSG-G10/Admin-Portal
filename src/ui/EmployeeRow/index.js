@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
 import { H5,H4 } from '../Typography'
 import { arrow } from '../../assets'
 import {useStore} from "../../control-data/context"
 import "./style.css";
-function EmployeeRow({key, employee:{first,last,created,balance,email} }) {
+function EmployeeRow({ employee:{first,last,created,balance,email} }) {
      const [,dispatch] = useStore()
     return (
-        <li className="employee-row" id={key}>
-            {/* avater empolyee , date , name , balance , tools */}
+        <li className="employee-row" id={email}>
             <div className="employee-row-avatar">
                   <img src={`https://robohash.org/${first}.png`} alt="avater" />  
             </div>
