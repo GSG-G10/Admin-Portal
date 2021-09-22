@@ -6,13 +6,15 @@
 body{
   font-family: 'Spartan', sans-serif;
 }
-.App{
+ .App{
     position: relative;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     min-height: 100vh;
     background-color: hsl(231,30%,11%);
     -webkit-transition: background-color 400ms ease-in-out;
     transition: background-color 400ms ease-in-out; 
 }
-   
+img{
+  width: 100%;
+}

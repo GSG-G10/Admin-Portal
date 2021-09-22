@@ -1,9 +1,10 @@
 import './App.css';
-
+import {Header,BodyPortal} from './components';
 function App() {
   return (
     <div className="App">
-      How are you? Elham
+      <Header />
+      <BodyPortal />
     </div>
   );
 }
