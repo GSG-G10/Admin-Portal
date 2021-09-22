@@ -11,20 +11,19 @@
 .second-header{
    font-family: 'Spartan',sans-serif;
     font-weight: 700;
-    font-size: 0.75rem;
+    font-size: .95rem;
     letter-spacing: -0.016rem;
     line-height: 1.25;
     color: hsl(0,0%,100%);
     transition: color 400ms ease-in-out; 
 }
 .third-header{
-     font-family: 'Spartan',sans-serif;
-    font-weight: 700;
-    font-size: 1rem;
+    font-family: 'Spartan',sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
     letter-spacing: -0.05rem;
     line-height: 1.5;
-    color: hsl(0,0%,100%);
-    -webkit-transition: color 400ms ease-in-out;
+    color: #fff;
     transition: color 400ms ease-in-out; 
 }
 
