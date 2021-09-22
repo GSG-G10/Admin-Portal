@@ -1,0 +1,18 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Spartan', sans-serif;
+}
+.App{
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+    background-color: hsl(231,30%,11%);
+    -webkit-transition: background-color 400ms ease-in-out;
+    transition: background-color 400ms ease-in-out; 
+}
+   

@@ -1,0 +1,30 @@
+.primary-header{
+    font-family: 'Spartan',sans-serif;
+    font-weight: 700;
+    font-size: clamp(1.25rem,5vw,2rem);
+    letter-spacing: -0.04rem;
+    color: hsl(0,0%,100%);
+    -webkit-transition: color 400ms ease-in;
+    transition: color 400ms ease-in;
+    margin-bottom: 4px; 
+}
+.second-header{
+   font-family: 'Spartan',sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: -0.016rem;
+    line-height: 1.25;
+    color: hsl(0,0%,100%);
+    transition: color 400ms ease-in-out; 
+}
+.third-header{
+     font-family: 'Spartan',sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: -0.05rem;
+    line-height: 1.5;
+    color: hsl(0,0%,100%);
+    -webkit-transition: color 400ms ease-in-out;
+    transition: color 400ms ease-in-out; 
+}
+
